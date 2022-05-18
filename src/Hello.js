@@ -1,12 +1,12 @@
 import React from "react";
 
-const Hello = ({ name, greeting }) => {
-    return `Hello ${name}, ${greeting}`
+function Hello({ name, greeting }) {
+    return <div>Hello {name}, {greeting}!</div>
 }
 
 Hello.defaultProps = {
     name: 'anonim',
-    greeting: 'Have a good day!'
+    greeting: 'Have a good day'
 }
 
 export default Hello
