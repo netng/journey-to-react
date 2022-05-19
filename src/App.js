@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Article userLogin="Sudah login"/>
+        <Article userLogin={true} name="ujang"/>
       </header>
     </div>
   );

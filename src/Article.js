@@ -1,12 +1,13 @@
 import * as React from 'react';
 import ContentArticle from './ContentArticle';
+import Rendering from './Rendering';
 import TitleArticle from './TitleArticle';
 
-function Article({ userLogin }) {
+function Article({ userLogin, name }) {
     return(
         <div style={{ margin: "10px" }}>
             <TitleArticle title="Lorem ipsum dolor sit amet"/>
-            <ContentArticle dataLogin={userLogin}>
+            <ContentArticle dataLogin={userLogin} name={name}>
                 Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
                 labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
                 animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
@@ -18,6 +19,7 @@ function Article({ userLogin }) {
                 Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
                 culpa duis.
             </ContentArticle>
+            <Rendering />
         </div>
     )
 }
