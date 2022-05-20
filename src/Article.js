@@ -3,6 +3,7 @@ import ContentArticle from './ContentArticle';
 import Rendering from './Rendering';
 import TitleArticle from './TitleArticle';
 import List from './List'
+import BlueButton from './BlueButton'
 
 function Article({ userLogin, name }) {
     const users = [
@@ -12,6 +13,9 @@ function Article({ userLogin, name }) {
         { id: 4, name: 'ijah', gender: 'female' },
         { id: 5, name: 'siti', gender: 'female' }
     ]
+
+    const info = () => alert("Custom on Click")
+
     return(
         <div style={{ margin: "10px" }}>
             <TitleArticle title="Lorem ipsum dolor sit amet"/>
@@ -29,6 +33,7 @@ function Article({ userLogin, name }) {
             </ContentArticle>
             <Rendering />
             <List users={users}/>
+            <BlueButton onCustomClick={info} caption="Custom On Click"/>
         </div>
     )
 }

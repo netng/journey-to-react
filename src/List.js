@@ -33,27 +33,40 @@ export default function List({ users }) {
     //        })}
     //    </ul>
     //)
+    const alert = () => window.alert('Hello')
+
+    const clickMe = (obj) => {
+        const btn = obj.target
+        btn.innerText = "Clicked :)"
+    }
+
     return(
-        <table border='1'>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>GENDER</th>
-                </tr>
-            </thead>
-            <tbody>
-                {users.length > 0 && users.map(user => {
-                    const {id, name, gender} = user
-                    return(
-                        <tr key={id}>
-                            <td>{id}</td>
-                            <td>{name}</td>
-                            <td>{gender}</td>
-                        </tr>
-                    );
-                })}
-            </tbody>
-        </table>
+        <div>
+            <table border='1'>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>GENDER</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.length > 0 && users.map(user => {
+                        const {id, name, gender} = user
+                        return(
+                            <tr key={id}>
+                                <td>{id}</td>
+                                <td>{name}</td>
+                                <td>{gender}</td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+            <button onClick={alert}>Info</button>
+            <button onClick={clickMe}>Click Me!</button>
+            <input onKeyDown={(e) => console.log('key down')} onKeyUp={() => console.log("key up")} defaultValue="onKey" ></input>
+
+        </div>
     );
 }
