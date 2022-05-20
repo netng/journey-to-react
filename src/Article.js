@@ -2,8 +2,16 @@ import * as React from 'react';
 import ContentArticle from './ContentArticle';
 import Rendering from './Rendering';
 import TitleArticle from './TitleArticle';
+import List from './List'
 
 function Article({ userLogin, name }) {
+    const users = [
+        { id: 1, name: 'ujang', gender: 'male' },
+        { id: 2, name: 'udin', gender: 'male' },
+        { id: 3, name: 'ace', gender: 'male' },
+        { id: 4, name: 'ijah', gender: 'female' },
+        { id: 5, name: 'siti', gender: 'female' }
+    ]
     return(
         <div style={{ margin: "10px" }}>
             <TitleArticle title="Lorem ipsum dolor sit amet"/>
@@ -20,6 +28,7 @@ function Article({ userLogin, name }) {
                 culpa duis.
             </ContentArticle>
             <Rendering />
+            <List users={users}/>
         </div>
     )
 }
